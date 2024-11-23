@@ -7,15 +7,14 @@ const dbName = 'ieeevisTweets';
 const collectionName = 'tweet';
 
 async function organizeTweetsByUser() {
-  await client.connect(); // Connect to Redis
+  await client.connect(); 
   const mongoClient = new MongoClient(mongoUrl);
 
   try {
-    await mongoClient.connect(); // Connect to MongoDB
+    await mongoClient.connect(); 
     const db = mongoClient.db(dbName);
     const collection = db.collection(collectionName);
 
-    // Fetch all tweets
     const tweets = await collection.find().toArray();
 
     for (const tweet of tweets) {
@@ -23,10 +22,8 @@ async function organizeTweetsByUser() {
         const screenName = tweet.user.screen_name;
         const tweetId = tweet.id_str;
 
-        // Add tweet ID to the Redis list for the user's screen_name
         await client.rPush(`tweets:${screenName}`, tweetId);
 
-        // Add the full tweet attributes to a Redis hash keyed by the tweet ID
         const tweetKey = `tweet:${tweetId}`;
         const tweetAttributes = {
           user_name: screenName,

@@ -1,4 +1,4 @@
-# README for IEEEVis 2020 Tweets Project
+# Redis Database - IEEEVis 2020 Tweets Project
 
 This repository contains scripts for managing and analyzing tweets collected during the 2020 IEEEVis Conference. The Node.js scripts interact with MongoDB and Redis to perform various queries and store data efficiently. Queries include counting tweets, aggregating favorite counts, creating leaderboards, and organizing tweets by user using Redis data structures.
 

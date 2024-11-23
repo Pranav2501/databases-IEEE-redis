@@ -5,6 +5,7 @@ const client = redis.createClient();
 const mongoUrl = 'mongodb://localhost:27017';
 const dbName = 'ieeevisTweets';
 
+
 async function countTweets() {
   await client.connect();
   const mongoClient = new MongoClient(mongoUrl);
