@@ -1,0 +1,28 @@
+node_modules/
+.env
+.DS_Store
+*.log
+dump.rdb
+dump.json
+dump.bson
+*.zip
+*.bz2
+coverage/
+data/
+*.dump
+
+# Ignore Redis and MongoDB related files
+redis-stack-server*
+mongodb/
+
+# Ignore Docker related files
+docker-compose.yml
+*.docker
+
+# Ignore OS generated files
+Thumbs.db
+*.DS_Store
+
+# Ignore IDE specific files
+.vscode/
+.idea/
