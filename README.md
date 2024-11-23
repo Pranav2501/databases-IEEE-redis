@@ -5,6 +5,7 @@ This repository contains scripts for managing and analyzing tweets collected dur
 ## Prerequisites
 - Node.js and npm
 - MongoDB (using Docker or MongoDB Atlas)
+- MongoDB Compass
 - Redis Stack (for advanced Redis capabilities)
 - MongoDB tools (e.g., `mongoimport`)
 - A tool to unzip files (e.g., Keka or 7zip)
@@ -14,8 +15,8 @@ This repository contains scripts for managing and analyzing tweets collected dur
 ### Step 0: Clone the Repository
 To get started, clone this repository to your local machine:
 ```sh
-git clone <repository-url>
-cd ieeevis2020-tweets-project
+git clone https://github.com/Pranav2501/databases-IEEE-redis.git
+cd IEEE-redis-db
 ```
 
 ### Step 1: Set Up Redis Stack
@@ -109,7 +110,7 @@ There are five queries in the project, each defined in its own JavaScript file:
 - Update the connection strings in the query files if your services are running elsewhere.
 
 ## Video Tutorial
-A video tutorial on setting up the environment and running the queries can be found here: [YouTube Video Placeholder](https://www.youtube.com/placeholder).
+You can find the video link here - [YouTube Video](https://youtu.be/e5KUZZA483A).
 
 ## Summary
 These scripts allow for efficient storage and retrieval of Twitter data using MongoDB and Redis, enabling you to perform a variety of data analysis tasks. Follow the steps above to set up the environment, load the dataset, and run each query to explore the data collected during the 2020 IEEEVis Conference.
